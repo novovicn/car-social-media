@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Monserrat', sans-serif;
+}
+
+
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    position: sticky;
+    top:0;
+
+}
+
+.header-left { 
+    float:left;
+    height: 10vh;
+}
+
+.header-right{
+    float: right;
+    height: 10vh;
+}
+
+.header li{
+    display: inline-block;
+    height: 100%;
+    padding:20px;
+    height: 10vh;
+}
+
+.header li a{ 
+    text-decoration: none;
+    font-size: 1.5em;
+    color:white;
+    height: 10vh;
+}
+
+
+.header li a:hover{ 
+    color:white;
+
+}
+
+.car-info{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.image-detail{
+    width: 50vw;
+    height: 60vh;
+
+}
+.car-details{
+    width: 40vw;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.image-detail img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.buttons-and-comments{
+    display: flex;
+    justify-content: space-between;
+    padding:50px;
+    height: 35vh;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 5px black;
+    margin-bottom: 10px;
+    transition: all .5s;
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.buttons a{
+    text-decoration: none;
+    color: rgb(252, 245, 233);
+    font-weight: bold;
+}
+
+.button-delete{
+    background-color: rgb(155, 9, 9);
+}
+.button-update{
+    background-color: rgb(231, 194, 29);
+}
+.button-add-comment{
+    background-color: seagreen;
+}
+
+.button:hover{
+    transform: scale(1.1);
+}

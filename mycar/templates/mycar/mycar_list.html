@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+  <h2 class='list-heading'>Car list:</h2>
+
+  <form class="form-search" action="." method="get">
+     <div class="form-group col-md-4">
+          <label for="category">Choose category:</label>
+          <select id="category" name="category" class="form-control">
+          <option selected>All</option>
+          {% for cat in categories %}
+          <option value="{{ cat }}">{{ cat }}</option>
+          {% endfor %}
+          </select>
+      
+      <button type="submit" class="search-button">Search</button>
+      </div>
+      </form>
+
+
+
+  <div class="cars">
+
+
+    
+      {% for car in cars %}
+      <div class="car">
+        <a class='car-list-link' href="{% url 'mycar:car_detail' pk=car.id %}">
+        
+         <p>Owner: {{car.owner}} </p>
+         <p>Car: {{car.brand}} {{car.model}}</p>
+         <p>Comments: {{car.comments.count}}</p>
+         <p>Category: {{ car.category }}</p>
+        
+        <img src="{{ car.image.url }}" alt="">
+       </a>
+       </div>
+       {% endfor %}
+    
+</div>
+    
+    {% endblock content %}

@@ -1,0 +1,366 @@
+body {
+    margin: 0px;
+    background: url(https://wallpapertag.com/wallpaper/full/4/a/c/697543-new-audi-wallpapers-1920x1080-macbook.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+  
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    position: sticky;
+    top:0;
+
+}
+
+.header-left { 
+    float:left;
+}
+
+.header-right{
+    float: right;
+}
+
+.header li{
+    display: inline-block;
+    height: 100%;
+    padding:20px;
+}
+
+.header li a{ 
+    text-decoration: none;
+    font-size: 1.5em;
+    color:white;
+}
+
+
+.header li a:hover{ 
+    color:white;
+
+}
+
+
+
+/* login */
+#register-header{
+    color: white;
+    margin-top: 30px;
+}
+
+.registration input[type=submit]{
+    display: block;
+    margin-top:10px;
+    width: 200px;
+    margin-left: 100px;
+}
+
+#login-header{
+    color: white;
+    margin-top: 30px;
+    width: 50%;
+    text-align: center;
+  }
+  
+
+.login-form {
+
+    width: 30%;
+    height: 30%;
+    margin: 10%;
+    border-radius: 10%;
+    background-color:rgba(255, 255, 255, .7);
+    padding: 30px;
+  
+}
+
+.login-form form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.login-form input{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 10px;
+}
+
+.login-form input[type=submit] {
+    width: 100%;
+    background-color: rgb(219, 230, 223);
+    color: rgb(23, 34, 5);
+    /* padding: 14px 20px; */
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .login-form p{
+      width: 100%;
+      font-size: 1.2em;
+      margin-left: 2px;
+  }
+
+
+  .cars{
+    width: 70vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+      
+  }
+
+  .car{
+      border: 2px solid darkgray;
+      margin: 10px;
+      height: 500px;
+      position: relative;
+      border-radius: 0 15px 0 15px;
+      overflow: hidden;
+      background-color:rgb(255,255,255,0.38);
+      
+    
+  }
+
+  .car img{
+      width: 100%;
+      height: 60%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  }
+
+  .car a{
+    text-decoration: none;
+    color:rgb(17, 17, 17);
+    font-size: 1.5em;
+   
+}
+
+.car a:hover{
+    text-decoration:none;
+    font-weight:bold;
+    color: black;
+   
+}
+
+  .list-heading{
+      text-align: center;
+      font-size: 3em;
+
+  }
+
+  .details{
+    width: 35%;
+    margin: 10px;
+    background:none;
+    border: 2px solid darkgray;
+    border-radius:30px;
+    padding:100px;
+
+  }    
+
+
+  .car-details{
+    color:aquamarine;
+
+  }
+
+  .car-details img{
+    width:70%;
+    height:auto;
+    border-radius:20px;
+    box-shadow: 8px 8px 10px lightgray;
+    
+
+  }
+
+  
+  
+  .car-comments{
+    color: blanchedalmond;
+    width:30%;
+
+
+  }
+
+  .car-comments a{
+    float:right;
+    text-decoration:none;
+    color:red;
+    font-size: 1.4em;
+  }
+
+
+
+  .buttons{
+    float:right;
+    width:30%;
+
+  }
+
+  .buttons a{
+
+    text-decoration:none;
+    color:aquamarine;
+    font-size:1.5em;
+    padding:10px;
+    
+
+
+  }
+
+  .car-create-form{
+    width:22%;
+    margin: 150px 150px ;
+    border-radius:30px;
+    border:1px solid white;
+    padding-top:10px;
+    padding-left: 45px;
+    padding-bottom: 10px;
+    /*background-image: url(https://labourenergy.org/wp-content/uploads/2019/12/audi-car-wallpaper-hd-for-mobile.jpg);*/
+    background-size: cover;
+    background-color:rgb(255,255,255,0.223);
+
+  
+  }
+
+
+  .car-create-form label{
+    display: block;
+    padding-bottom: 10px;
+    color:white;
+
+  }
+
+  .car-create-form input{
+    width: 80%;
+    border: 1px solid white;
+    border-radius:5px;
+    height: 30px;
+    background: none;
+    padding-left:10px;
+    color:white;
+  }
+
+  .car-create-form input[type=submit]{
+    background-color:green;
+    color:white;
+    width:80%;
+    height: 35px;
+    margin-bottom: 15px;
+  }
+
+  .car-create-form input[type=file]{
+   
+    border:none;
+  }
+
+  .car-create-form input[type=number]{
+    text-align: center;
+    color:white;
+  }
+
+  #id_category{
+    width:80%;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .homepage{
+    color:white;
+    margin-top: 100px;
+    margin-left:80px;
+    font-size: 1.5em;
+  }
+
+  .registration{
+    color:white;
+    font-weight:500;
+    margin-top:100px;
+  }
+
+  .form-search label{
+      font-size: 2rem;
+      color:white;
+  }
+
+  .list-heading{
+      color:white;
+  }
+
+  .search-button{
+      width: 200px;
+      margin-top: 20px;
+      height: 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Montserrat';
+  }
+
+  .comment-container{
+    margin:50px;
+  }
+
+  .comment-container h2{
+    margin-left:35px;
+    color:white;
+  }
+
+  .comment-container button{
+    border:none;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    margin-left:35px;
+  }
+
+
+  #confirm-delete p{
+    color: white;
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+
+  #confirm-delete input{
+    height: 50px;
+    margin-left:20px;
+    width: 150px;
+    color: white;
+    border-radius: 5px;
+    font-size:2rem;
+    border:none;
+    font-family: 'Monserrat';
+    font-weight:bold;
+    background-color:rgba(255,80,80,.9);
+    margin-bottom:20px;
+
+  }
+
+  #cancel-delete{
+    height: 0px;
+    margin-left:20px;
+    width: 150px;
+    color: white;
+    background-color:rgba(126, 202, 39, 0.9);
+    border-radius: 5px;
+    font-size:2rem;
+    border:none;
+    font-family: 'Monserrat';
+    padding:5px;
+    text-decoration: none;
+
+  }

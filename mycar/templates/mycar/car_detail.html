@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourCar</title>
+    <link rel="stylesheet" href="{% static 'cardet2.css' %}">
+    <!--link rel="stylesheet" href="{% static 'style.css' %}"-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://img.icons8.com/officexs/16/000000/car.png" type="image/x-icon">
+
+</head>
+
+<body class='car-detail-page'>
+    <header class='header'>
+            <ul class='header-left'>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'mycar:create' %}">Add your car</a></li>
+            <li><a href="{% url 'mycar:car_list' %}">Car List</a></li>
+            </ul>
+        <ul class="header-right">
+        
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'accounts:logout' %}">Log Out</a></li>
+
+        {% else %}
+            <li><a href="{% url 'accounts:login' %}">Log In</a></li>
+            <li><a href="{% url 'accounts:register' %}">Register</a></li>
+
+        {% endif %}
+            
+        </ul>
+    </header>
+
+  
+
+    <div class="car-info">
+        <div class="car-details">
+            <h1>Brand: {{car_detail.brand}}</h1>
+            <h1>Model: {{car_detail.model}}</h1>
+            <h2>Year:{{car_detail.year}}</h2>
+            <h2>Owner: {{car_detail.owner}}</h2>
+        </div>
+         <div class="image-detail">
+            <img src="{{ car_detail.image.url }}" alt="">
+        </div>
+    </div>
+
+    <div class="buttons-and-comments">
+        
+        <div class="car-comments">
+            <h2>Comments: </h2>
+            {% for comment in car_detail.comments.all %}
+            <h3>Author: {{comment.author}}</h3>
+            <h4>Comment: {{comment.text}}</h4>
+            {% if comment.author == request.user or user.is_superuser %}   
+            <a href="{% url 'mycar:comment_remove' pk=comment.pk %}">Delete comment</a>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="buttons">
+            <a class="button button-add-comment" href="{% url 'mycar:add_comment' pk=car_detail.pk %}">Add comment</a>
+            {% comment %} Only author or admin can update or delete post {% endcomment %}
+            {% if car_detail.author == request.user or user.is_superuser %}
+             <a class="button button-update" href="{% url 'mycar:update' pk=car_detail.pk %}">Update post</a>     
+            <a class='delete-post button button-delete'href="{% url 'mycar:delete' pk=car_detail.pk %}">Delete post</a>
+            {% endif %}
+        </div>
+        
+    </div>
+</body>
+</html>
